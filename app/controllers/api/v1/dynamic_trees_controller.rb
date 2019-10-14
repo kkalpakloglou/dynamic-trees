@@ -1,11 +1,15 @@
 module Api
   module V1
     class DynamicTreesController < ActionController::API
-      before_action :set_dynamic_tree, except: [:show]
+      before_action :set_dynamic_tree, only: [:parent, :children]
+
+      def index
+        render json: DynamicTree.roots.pluck(:id)
+      end
 
       def show
         @root = DynamicTree.roots.find params[:id]
-        
+
         render json: @root.to_structured_tree
       end
 
