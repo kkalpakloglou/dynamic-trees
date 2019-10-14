@@ -13,7 +13,7 @@ class DynamicTree < ApplicationRecord
   private
 
   def set_materialized_path
-    return if parent_id.nil?
+    self.update_attribute(:materialized_path, self.id) and return if parent_id.nil?
 
     parent_math_path = DynamicTree.unscoped { DynamicTree.find(parent_id).try(:materialized_path) }
 
