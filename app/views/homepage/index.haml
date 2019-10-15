@@ -1,0 +1,16 @@
+#homepage
+  .index
+    %nav.top-nav.m-b-3.p-t-1.animated.fadeInDown.clearfix
+      .container
+        %ul.list-unstyled.list-inline
+          %li.list-inline-item.m-r-0
+            = link_to "TREE API", api_v1_dynamic_trees_path, class: "btn signup-btn btn-danger btn-sm", target: "_blank"
+    / jumbotron
+    %header#home.top-hero.jumbotron-fluid.p-b-3.bg-faded
+      .container.animated.fadeInUp
+        %h1.display-3 Dynamic Trees
+        %p.lead.m-t-1 Tree structures with Materialized Paths
+        = link_to "TREE API", api_v1_dynamic_trees_path, class: "btn btn-lg btn-danger m-t-1", target: "_blank"
+        = link_to "https://github.com/kkalpakloglou/dynamic-trees", class: "btn btn-lg btn-default m-t-1", target: "_blank" do
+          %i.fa.fa-github{"aria-hidden" => "true"}
+          Learn More
