@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple implementation of tree structures with Materialized Paths. You can find a live representation here: https://dynamic-trees-kkalpakloglou.herokuapp.com/
 
-Things you may want to cover:
+**API consists of 4 DynamicTree resource endpoints:**
 
-* Ruby version
+List of Root Nodes:
 
-* System dependencies
+`https://dynamic-trees-kkalpakloglou.herokuapp.com/api/v1/dynamic_trees`
 
-* Configuration
+Tree Structure of Root Node:
 
-* Database creation
+`https://dynamic-trees-kkalpakloglou.herokuapp.com/api/v1/dynamic_trees/:id`
 
-* Database initialization
+Parent Node:
 
-* How to run the test suite
+`https://dynamic-trees-kkalpakloglou.herokuapp.com/api/v1/dynamic_trees/:id/parent`
 
-* Services (job queues, cache servers, search engines, etc.)
+Children Nodes:
 
-* Deployment instructions
-
-* ...
+`https://dynamic-trees-kkalpakloglou.herokuapp.com/api/v1/dynamic_trees/:id/children`
